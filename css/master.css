@@ -1,0 +1,233 @@
+:root{
+    --main-color: #ff32dd;
+    --background-color: #f4f5fc;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--background-color);
+}
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--background-color);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+.light-text{
+    color: #f4f5fc !important;
+}
+.dark-text{
+    color: #141210 !important;
+}
+.head-title{
+    width: fit-content;
+    background-color: #092147;
+    color: var(--main-color);
+    margin: 20px auto;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    font-size: 28px;
+    position: relative;
+    transition: .3s;
+}
+.head-title::before,
+.head-title::after{
+    content: "";
+    width: 0;
+    height: 4px;
+    background-color: var(--main-color);
+    position: absolute;
+}
+.head-title::before{
+    top: 0;
+    left: 0;
+}
+.head-title::after{
+    bottom: 0;
+    right: 0;
+}
+.head-title:hover::before,
+.head-title:hover::after{
+    animation: fill .5s alternate forwards;
+}
+.bg-card-dark{
+    background-color: #333 !important;
+}
+.bg-card-light{
+    background-color: #fff !important;
+}
+.disabled{
+    pointer-events: none;
+}
+/* start landing  */
+.navbar{
+    box-shadow: 0px -5px 20px 0px #33333379;
+    background-color: var(--background-color);
+    z-index: 10000;
+}
+.navbar .container > a{
+    font-family: 'Roboto Slab', serif;
+    color: var(--main-color) !important;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--main-color) !important;
+}
+.navbar-collapse i{
+    cursor: pointer;
+}
+@media(min-width: 769px){
+    .navbar .navbar-nav li::before{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 4px;
+        top: -8px;
+        left: 0;
+        background-color: var(--main-color);
+    }
+    .navbar .navbar-nav li:hover::before{
+        animation: fill .3s alternate forwards;
+    }
+}
+.landing-page .info h2{
+    color: var(--main-color);
+}
+.links i{
+    font-size: 20px;
+    background-color: #092147;
+    color: var(--main-color) !important;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.links i:hover{
+    background-color: var(--main-color);
+    color: #092147 !important;
+}
+.landing-page .info .view-work{
+    text-decoration: none;
+    background-color: #092147;
+    color: var(--main-color) !important;
+    width: fit-content;
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: .3s;
+}
+.landing-page .info .view-work:hover{
+    background-color: var(--main-color);
+    color: #092147 !important;
+}
+@media(min-width: 320px) and (max-width:992px){
+    .landing-page .info{
+        text-align: center;
+    }
+    .landing-page .view-work{
+        margin: auto;
+    }
+}
+.landing-page .image .person-photo{
+    width: 400px;
+    height: 600px;
+    position: relative;
+}
+.landing-page .image .background{
+    width: 500px;
+    height: 500px;
+    background-color: var(--main-color);
+    z-index: -1;
+}
+@media(min-width: 320px) and (max-width:767px){
+    .landing-page .image .background{
+        width: 400px;
+        height: 400px;
+    }
+}
+/* end landing  */
+/* start skills  */
+.skills .image img{
+    width: 400px;
+    height: 452px;
+}
+@media(max-width: 768px){
+    .skills .image img{
+        width: 300px;
+        height: 339px;
+    }
+}
+/* end skills  */
+/* start projects */
+.projects .card{
+    transition: .3s;
+}
+.projects .card:hover{
+    transform: scale(1.1);
+}
+@media(min-width: 768px) and (max-width: 992px){
+    .projects .card img{
+        height: 236px;
+    }
+}
+@media(min-width: 992px) and (max-width: 1440px){
+    .projects .card img{
+        height: 157px;
+    }
+}
+@media(min-width: 1440px){
+    .projects .card img{
+        height: 216px;
+    }
+}
+.projects .card-body a{
+    background-color: #092147;
+    color: var(--main-color) !important;
+    transition: .3s;
+}
+.projects .card-body a:hover{
+    background-color: var(--main-color);
+    color: #092147 !important;
+}
+/* end projects */
+/* start contact */
+@media(min-width:320px) and (max-width: 767px){
+    .contact .card{
+        text-align: center;
+    }
+    .contact .card .row > div{
+        border: none !important;
+        padding-top: 10px;
+    }
+}
+/* end contact */
+/* start footer */
+.footer{
+    background-color: #020e22;
+}
+.footer h4{
+    font-family: 'Roboto Slab', serif;
+    color: var(--main-color);
+}
+.footer p{
+    color: #f4f5fc !important;
+}
+.footer p span{
+    color: var(--main-color);
+}
+/* end footer */
+/* start animation  */
+@keyframes fill{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+/* end animation  */
