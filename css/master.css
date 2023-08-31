@@ -168,8 +168,10 @@ body {
 .projects .card{
     transition: .3s;
 }
-.projects .card:hover{
-    transform: scale(1.1);
+@media (min-width: 768px){
+    .projects .card:hover{
+        transform: scale(1.1);
+    }
 }
 @media(min-width: 768px) and (max-width: 992px){
     .projects .card img{
@@ -205,6 +207,34 @@ body {
         border: none !important;
         padding-top: 10px;
     }
+}
+@media (min-width: 768px){
+    .box-message{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}
+.box-message textarea{
+    height: 200px;
+}
+.box-message textarea:focus,
+.box-message input:focus{
+    outline: none;
+}
+.box-message .send{
+    background-color: #092147;
+    color: var(--main-color) !important;
+    width: 100px;
+    margin-top: 10px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: .3s;
+}
+.box-message .send:hover{
+    background-color: var(--main-color);
+    color: #092147 !important;
 }
 /* end contact */
 /* start footer */
