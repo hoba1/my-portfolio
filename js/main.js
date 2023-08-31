@@ -71,3 +71,19 @@ window.onscroll = function(){
         }
     }
 }
+
+function SendMail(){
+    var params = {
+        from_name : document.getElementById("full_name").value,
+        email_id : document.getElementById("email_id").value,
+        message : document.getElementById("message").value
+    }
+    emailjs.send("service_zkkmo0v", "template_osjcx3e", params).then(function (res) {
+        alert("Your Message Sent Successfully");
+    }).catch((err) => console.log(err))
+}
+
+let sendbtn = document.querySelector(".send");
+sendbtn.addEventListener("click", () => {
+    SendMail()
+})
