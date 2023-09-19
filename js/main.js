@@ -72,11 +72,16 @@ window.onscroll = function(){
     }
 }
 
+// send mail
+let fullname = document.getElementById("full_name");
+let emailid = document.getElementById("email_id");
+let messagebox = document.getElementById("message");
+
 function SendMail(){
     var params = {
-        from_name : document.getElementById("full_name").value,
-        email_id : document.getElementById("email_id").value,
-        message : document.getElementById("message").value
+        from_name : fullname.value,
+        email_id : emailid.value,
+        message : messagebox.value
     }
     emailjs.send("service_zkkmo0v", "template_osjcx3e", params).then(function (res) {
         alert("Your Message Sent Successfully");
@@ -85,5 +90,12 @@ function SendMail(){
 
 let sendbtn = document.querySelector(".send");
 sendbtn.addEventListener("click", () => {
-    SendMail()
+    if(fullname.value != "" && emailid.value != "" && messagebox.value != ""){
+        SendMail()
+        fullname.value = ""
+        emailid.value = ""
+        messagebox.value = ""
+    } else {
+        alert("The Inputs Is Required")
+    }
 })
