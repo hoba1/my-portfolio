@@ -1,6 +1,8 @@
 :root{
     --main-color: #ff32dd;
     --background-color: #f4f5fc;
+    --text-color: #141210;
+    --bg-card: #fff;
 }
 * {
     box-sizing: border-box;
@@ -17,12 +19,6 @@ body {
 }
 ::-webkit-scrollbar-thumb{
     background-color: var(--main-color);
-}
-.light-text{
-    color: #f4f5fc !important;
-}
-.dark-text{
-    color: #141210 !important;
 }
 .head-title{
     width: fit-content;
@@ -61,6 +57,9 @@ body {
 .bg-card-light{
     background-color: #fff !important;
 }
+.card{
+    background-color: var(--bg-card);
+}
 .disabled{
     pointer-events: none;
 }
@@ -74,10 +73,16 @@ body {
     font-family: 'Roboto Slab', serif;
     color: var(--main-color) !important;
 }
+.navbar .navbar-nav .nav-link{
+    color: var(--text-color) !important;
+}
 .navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link:focus,
 .navbar .navbar-nav .nav-link:hover {
     color: var(--main-color) !important;
+}
+.navbar i{
+    color: var(--text-color) !important;
 }
 .navbar-collapse i{
     cursor: pointer;
@@ -99,6 +104,9 @@ body {
 .landing-page .info h2{
     color: var(--main-color);
     height: 40px;
+}
+.landing-page .info p {
+    color: var(--text-color) !important;
 }
 .links i{
     font-size: 20px;
@@ -163,6 +171,10 @@ body {
         height: 339px;
     }
 }
+.skills .skills-content p,
+.skills .skills-content i{
+    color: var(--text-color) !important;
+}
 /* end skills  */
 /* start projects */
 .projects .card{
@@ -188,17 +200,26 @@ body {
         height: 216px;
     }
 }
-.projects .card-body a{
+.projects .card-body p,
+.projects .card-body h5{
+    color: var(--text-color) !important;
+}
+.projects .card a{
     background-color: #092147;
     color: var(--main-color) !important;
     transition: .3s;
 }
-.projects .card-body a:hover{
+.projects .card a:hover{
     background-color: var(--main-color);
     color: #092147 !important;
 }
 /* end projects */
 /* start contact */
+.contact p,
+.contact i,
+.contact h5 {
+    color: var(--text-color) !important;
+}
 @media(min-width:320px) and (max-width: 767px){
     .contact .card{
         text-align: center;
