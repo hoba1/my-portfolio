@@ -25,23 +25,17 @@ function addandremoveclass(e,ca,cr){
 }
 function darkmode(){
     document.documentElement.style.setProperty("--background-color", "#141210");
+    document.documentElement.style.setProperty("--text-color", "#f4f5fc");
+    document.documentElement.style.setProperty("--bg-card", "#333");
     addandremoveclass(darkandlightbtn,"fa-sun","fa-moon");
     addandremoveclass(darkandlightbtn,"light-text","dark-text");
-    addclass(document.querySelectorAll("a"),"light-text","dark-text");
-    addclass(document.querySelectorAll("p"),"light-text","dark-text");
-    addclass(document.querySelectorAll("i"),"light-text","dark-text");
-    addclass(document.querySelectorAll("h5"),"light-text","dark-text");
-    addclass(document.querySelectorAll(".card"),"bg-card-dark","bg-card-light");
 }
 function lightmode(){
     document.documentElement.style.setProperty("--background-color", "#f4f5fc");
+    document.documentElement.style.setProperty("--text-color", "#141210");
+    document.documentElement.style.setProperty("--bg-card", "#fff");
     addandremoveclass(darkandlightbtn,"fa-moon","fa-sun");
     addandremoveclass(darkandlightbtn,"dark-text","light-text");
-    addclass(document.querySelectorAll("a"),"dark-text","light-text");
-    addclass(document.querySelectorAll("p"),"dark-text","light-text");
-    addclass(document.querySelectorAll("i"),"dark-text","light-text");
-    addclass(document.querySelectorAll("h5"),"dark-text","light-text");
-    addclass(document.querySelectorAll(".card"),"bg-card-light","bg-card-dark");
 }
 var typed = new Typed('.auto-typing', {
     strings: ["Mohab Khaled", "Front End Developer"],
